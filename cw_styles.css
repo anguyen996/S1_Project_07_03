@@ -17,7 +17,7 @@
 
 /* Import Basic Design Styles  */
 
-@import  "cw_designs.css";
+@import url("cw_designs.css");
 
 /* ===============================
 	General Styles for All Devices
@@ -52,7 +52,7 @@ nav#bottom ul {
         background-color: rgb(51, 51, 51)
     }
 
-     aside, article img, article {
+     aside, article img, section#spotlight{
         display: none;
     }
 
@@ -62,30 +62,71 @@ nav#bottom ul {
         -webkit-flex-flow: row wrap;
         flex-flow: row wrap;
     }
-    ul {
+    ul li {
         font-size: 2.2em;
         -webkit-flex: 1 1 130px;
         flex: 1 1 130px;
     }
 
     nav#top ul li:nth-of-type(1) {
-        background: url(cw_image01.png)
+        background: url(cw_image01.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
-
     nav#top ul li:nth-of-type(2) {
-        background: url(cw_image02.png)
+        background: url(cw_image02.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     nav#top ul li:nth-of-type(3) {
-        background: url(cw_image03.png)
+        background: url(cw_image03.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     nav#top ul li:nth-of-type(4) {
-        background: url(cw_image04.png)
+        background: url(cw_image04.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     nav#top ul li:nth-of-type(5) {
-        background: url(cw_image05.png)
+        background: url(cw_image05.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     nav#top ul li:nth-of-type(6) {
-        background: url(cw_image06.png)
+        background: url(cw_image06.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    p#links {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+    }
+
+    p#links a {
+        color: white;
+        background-color: rgb(220, 27, 27);
+        border-radius: 20px;
+        padding: 10px;
+        text-decoration: none;
+
     }
 }
 
@@ -96,6 +137,43 @@ nav#bottom ul {
    ============================================
 */
 
-@media only screen and (max-width: 481px) {
-    
+@media only screen and (min-width: 481px) {
+    body {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+
+    article {
+        -webkit-flex: 2 1 400px;
+        flex: 2 1 400px;
+    }
+
+    aside {
+        -webkit-flex: 1 2 200px;
+        flex: 1 2 200px;
+    }
+
+    nav#top ul {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        background-color: rgb(51, 51, 51);
+        height: 50px;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    nav#top ul li { 
+        max-width: 80px;
+        flex: 1 1 80px;
+    }
+
+    p#links {
+        display: none;
+    }
 }
